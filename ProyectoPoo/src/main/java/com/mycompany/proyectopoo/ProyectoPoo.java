@@ -12,6 +12,6 @@ package com.mycompany.proyectopoo;
 public class ProyectoPoo {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        System.out.println("porquenosirve");
     }
 }
