@@ -11,4 +11,11 @@ package com.mycompany.proyectopoo;
 public class Empleado extends Persona {
     private String estado;
     
+    //getset
+    public String estado(){
+        return estado;
+    }
+    public void setEstado(String estado){
+        this.estado = estado;
+    }
 }
