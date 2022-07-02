@@ -18,4 +18,8 @@ public class Empleado extends Persona {
     public void setEstado(String estado){
         this.estado = estado;
     }
+    
+    public void eliminarEmpleado(){
+        
+    }
 }
