@@ -69,7 +69,7 @@ public class Servicio {
     
     //Metodo eliminar Servicio
     public void eliminarServicio(){
-    
+     estado = "Inactivo";
     }
     
     
