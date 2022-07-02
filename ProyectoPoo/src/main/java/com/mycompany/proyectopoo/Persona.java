@@ -46,4 +46,11 @@ public class Persona {
         this.telefono = telefono;
     }
     
+    public void agregarPersona(){
+        
+    }
+    
+    public void editarPersona(){
+        
+    }
 }
