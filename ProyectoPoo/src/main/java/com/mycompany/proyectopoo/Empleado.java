@@ -20,6 +20,6 @@ public class Empleado extends Persona {
     }
     
     public void eliminarEmpleado(){
-        
+        estado = "Inactivo";
     }
 }
