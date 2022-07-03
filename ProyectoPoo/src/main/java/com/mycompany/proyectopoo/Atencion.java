@@ -46,8 +46,17 @@ public class Atencion {
      public void registrarAtencion() {
         
     }
-    
+    //Hacemos sobrecarga de metodos
+    //Consultar atencion con la cedula del empleado
      public void consultarAtencion() {
+        
+    }
+    //Consultar atencion con la cedula del cliente
+    public void consultarAtencion() {
+        
+    }
+    //Consultar atencion con la fecha
+    public void consultarAtencion() {
         
     }
     
