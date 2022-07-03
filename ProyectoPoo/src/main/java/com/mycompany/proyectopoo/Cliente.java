@@ -11,6 +11,12 @@ package com.mycompany.proyectopoo;
 public class Cliente extends Persona {
     private String datosRepresentante;
     
+    //Constructor
+    public Cliente(char cedula, String nombre, char telefono, String email, String datosRepresentante){
+        super(cedula, nombre, telefono, email);//constructor de la clase Persona
+        this.datosRepresentante = datosRepresentante;
+    }
+    
     public String getDatosRepresentante(){
         return datosRepresentante;
     }
