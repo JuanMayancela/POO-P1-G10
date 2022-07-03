@@ -62,7 +62,11 @@ public class Cita {
         
     }
      
-     public void consultarCita() {
+     public void consultarCita(String fechaConsultar) {
+         if(fecha.equals(fechaConsultar)){
+             System.out.println("")
+         
+         }
         
     }
     
