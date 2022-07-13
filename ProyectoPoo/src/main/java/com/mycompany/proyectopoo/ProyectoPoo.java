@@ -4,6 +4,7 @@
  */
 
 package com.mycompany.proyectopoo;
+import java.util.Scanner;
 
 /**
  *
@@ -12,6 +13,44 @@ package com.mycompany.proyectopoo;
 public class ProyectoPoo {
 
     public static void main(String[] args) {
-        System.out.println("porquenosirveaaaaaaaaaaaaaaaaaaaaa");
+    Scanner input = new Scanner(System.in);
+    //menu
+    System.out.println("""
+                       1.Servicios
+                       2.Empleados
+                       3.Clientes
+                       4.Citas
+                       5.Atenciones
+                       6.Salir""");
+    String opcion = input.nextLine();
+    
+    //opcion 1 Servicios
+    
+    //opcion 2 Empleados
+    
+    //opcion 3 Clientes
+    
+    //opcion 4 Citas
+    if(opcion == "4"){
+      System.out.println("""
+                         1. Crear Cita
+                         2. Eliminar Cita
+                         3. COnsultar citas for fecha""");
     }
+
+    
+    //opcion 5 Atenciones
+    if(opcion == "5"){
+      System.out.println("""
+                         1. Registrar atención
+                         2. Consultar atención""");
+    }
+
+    
+    //opcion 6 Salir
+    if(opcion == "6"){
+      System.out.println("Gracias por su visita");
+    }
+    input.close();
+  }
 }
