@@ -28,19 +28,28 @@ public class ProyectoPoo {
         //opcion 1 Servicios
         switch(opcion){
             case "1": Servicio.);
-                
+                //Recorro la lista con los objetos de clase Servicio
+                for(Servicio servicio: servicios){
+                    System.out.println(servicio);//muestro cada uno de los servicios
+                }
         }
     }
     
 
     //opcion 2 Empleados
     if(opcion == "2"){
-        
+        //Recorro la lista con los objetos de clase Empleado
+        for(Empleado empleado: empleados){
+            System.out.println(empleado);//muestro cada uno de los empleados
+        }
         
     }
     //opcion 3 Clientes
     if(opcion == "3"){
-        
+        //Recorro la lista con los objetos de clase Cliente
+        for(Cliente cliente: clientes){
+            System.out.println(cliente);//muestro cada uno de los clientes
+        }
         
     }
     //opcion 4 Citas
