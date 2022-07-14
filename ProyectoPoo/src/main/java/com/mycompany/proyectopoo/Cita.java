@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.proyectopoo;
-
+import java.util.Scanner;
 /**
  *
  * @author Juan Mayancela
@@ -64,8 +64,10 @@ public class Cita {
         
     }
      //metodo consultarCita
-     public void consultarCita(String fechaConsultar) {
-         System.out.println("Ingrese la fecha deseada: ");
+     public void consultarCita() {
+         Scanner sc = new Scanner(System.in);
+         System.out.println("Ingrese la fecha a consultar ");
+         String fechaConsultar = sc.nextLine();
          if(fecha.equals(fechaConsultar)){
              System.out.println("");
          }
