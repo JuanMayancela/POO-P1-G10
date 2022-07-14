@@ -32,8 +32,27 @@ public class ProyectoPoo {
                 for(Servicio servicio: servicios){
                     System.out.println(servicio);//muestro cada uno de los servicios
                 }
-                //Se podrán agregar servicios, editar y eliminar
-                
+                //Se podrán agregar servicios, editar y eliminar(Submenu)
+                //submenu
+                System.out.println("""
+                       1.Agregar Servicios
+                       2.Editar Servicios
+                       3.Eliminar Servicios""");
+                String op = null;
+                do{
+                    op = input.nextLine();
+                switch(op){
+                        case "1":
+                        agregarServicio();
+                        break;
+                        case "2":
+                        editarServicio();
+                        break;
+                        case "3":
+                        eliminarServicio();
+                        break;
+                  }
+                }
                 break;
             case "2":
                 //Recorro la lista con los objetos de clase Empleado
