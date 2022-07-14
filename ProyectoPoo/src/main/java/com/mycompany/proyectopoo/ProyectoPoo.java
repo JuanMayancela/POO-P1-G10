@@ -27,9 +27,30 @@ public class ProyectoPoo {
         opcion = input.nextLine();
         //opcion 1 Servicios
         switch(opcion){
-            case "1": Servicio.);
+            case "1":
+                //Recorro la lista con los objetos de clase Servicio
+                for(Servicio servicio: servicios){
+                    System.out.println(servicio);//muestro cada uno de los servicios
+                }
+                //Se podrán agregar servicios, editar y eliminar
                 
-        }
+                break;
+            case "2":
+                //Recorro la lista con los objetos de clase Empleado
+                for(Empleado empleado: empleados){
+                    System.out.println(empleado);//muestro cada uno de los empleados
+                }
+                //Se podrán agregar empleados, editar y eliminar
+                
+                break;
+           case "3":
+                //Recorro la lista con los objetos de clase Cliente
+                for(Cliente cliente: clientes){
+                    System.out.println(cliente);//muestro cada uno de los clientes 
+                }
+                //Se podrán agregar clientes y editar (todos los campos menos la cédula) 
+
+                break;
     }
     
 
