@@ -38,10 +38,10 @@ public class ProyectoPoo {
                        1.Agregar Servicios
                        2.Editar Servicios
                        3.Eliminar Servicios""");
-                String op = null;
+                String opServ = null;
                 do{
-                    op = input.nextLine();
-                switch(op){
+                    opServ = input.nextLine();
+                switch(opServ){
                         case "1":
                         agregarServicio();
                         break;
@@ -60,7 +60,25 @@ public class ProyectoPoo {
                     System.out.println(empleado);//muestro cada uno de los empleados
                 }
                 //Se podrán agregar empleados, editar y eliminar
-                
+                //submenu
+                System.out.println("""
+                       1.Agregar Empleados
+                       2.Editar Empleados
+                       3.Eliminar Empleados""");
+                String opEmp = null;
+                do{
+                    opEmp = input.nextLine();
+                switch(opEmp){
+                        case "1":
+                        agregarEmpleado();
+                        break;
+                        case "2":
+                        editarEmpleado();
+                        break;
+                        case "3":
+                        eliminarEmpleado();
+                        break;
+                  }                
                 break;
            case "3":
                 //Recorro la lista con los objetos de clase Cliente
@@ -68,7 +86,21 @@ public class ProyectoPoo {
                     System.out.println(cliente);//muestro cada uno de los clientes 
                 }
                 //Se podrán agregar clientes y editar (todos los campos menos la cédula) 
-
+                //submenu
+                System.out.println("""
+                       1.Agregar Clientes
+                       2.Editar Clientes""");
+                String opCl = null;
+                do{
+                    opCl = input.nextLine();
+                switch(opCl){
+                        case "1":
+                        agregarCliente();
+                        break;
+                        case "2":
+                        editarCliente();
+                        break;
+                  }   
                 break;
     }
     
