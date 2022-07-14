@@ -22,13 +22,17 @@ public class ProyectoPoo {
                        4.Citas
                        5.Atenciones
                        6.Salir""");
-    String opcion = input.nextLine();
-    
-    //opcion 1 Servicios
-    if(opcion == "1"){
-        
-        
+    String opcion = null;
+    do{
+        opcion = input.nextLine();
+        //opcion 1 Servicios
+        switch(opcion){
+            case "1": Servicio.);
+                
+        }
     }
+    
+
     //opcion 2 Empleados
     if(opcion == "2"){
         

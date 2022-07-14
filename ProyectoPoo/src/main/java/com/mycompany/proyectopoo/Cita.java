@@ -57,7 +57,7 @@ public class Cita {
     }
     Scanner sc = new Scanner(System.in);
     //metodo crearCita
-     public void crearCita(String fecha, String hora, nomServicio nomServicio, Empleado perEncargada) {
+     public void crearCita(String fecha, String hora, String nomServicio, Empleado perEncargada) {
         
     }
      //metodo eliminarCita
@@ -76,5 +76,5 @@ public class Cita {
              System.out.println();
          }
     }
-    sc.close();
+        sc.close();
 }

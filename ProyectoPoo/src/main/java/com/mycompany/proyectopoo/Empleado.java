@@ -30,4 +30,8 @@ public class Empleado extends Persona {
     public void editarEmpleado(){
         
     }
+    @Override
+    public String toString() {
+	return "Empleado [cedula=" + cedula + ", nombre=" + nombre + ", telefono=" + telefono + ", email=" + email + ", estado=" + estado"]";
+	}
 }

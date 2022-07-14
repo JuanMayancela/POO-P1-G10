@@ -10,6 +10,8 @@ package com.mycompany.proyectopoo;
  */
 public class Cliente extends Persona {
     private String datosRepresentante;
+    private ArrayList
+    //lista de clientes
     
     //Constructor
     public Cliente(String nombre, String email, String cedula, String telefono, String datosRepresentante){

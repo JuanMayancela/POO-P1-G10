@@ -27,9 +27,9 @@ public class Sistema {
         clientes.add(c2);
         //servicios
         servicios = new ArrayList<>();
-        Servicio serv1 = new Servicio(nomServicio.Terapia_de_Lenguaje, "1:00", 23.50, "Activo");
-        Servicio serv2 = new Servicio(nomServicio.Terapia_de_Lenguaje, "2:30", 40.00, "Activo");
-        Servicio serv3 = new Servicio(nomServicio.Terapia_Psicopedagogica, "3:00", 70.00, "Inactivo");
+        Servicio serv1 = new Servicio("Terapia_de_Lenguaje", "1:00", 23.50, "Activo");
+        Servicio serv2 = new Servicio("Terapia_de_Lenguaje", "2:30", 40.00, "Activo");
+        Servicio serv3 = new Servicio("Terapia_Psicopedagogica", "3:00", 70.00, "Inactivo");
         servicios.add(serv1);
         servicios.add(serv2);
         servicios.add(serv3);
