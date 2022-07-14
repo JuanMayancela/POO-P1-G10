@@ -76,4 +76,5 @@ public class Cita {
              System.out.println("");
          }
     }
+    sc.close();
 }
