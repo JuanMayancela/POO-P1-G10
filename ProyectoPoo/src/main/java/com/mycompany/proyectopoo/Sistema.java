@@ -15,6 +15,7 @@ public class Sistema {
     
     //Metodo inicializar sistema
     public static void inicializarSistema(){
+        //Creamos los objetos y los agregamos a la lista que le corresponde
         //Empleado
         empleados = new ArrayList<>();
         Empleado empl = new Empleado("Juan", "juangp20@gmail.com", "0926441132", "0985470321" ,"Activo");
