@@ -13,20 +13,21 @@ import java.util.Scanner;
 public class ProyectoPoo {
 
     public static void main(String[] args) {
-    Scanner input = new Scanner(System.in);
-    //menu
-    System.out.println("""
-                       1.Servicios
-                       2.Empleados
-                       3.Clientes
-                       4.Citas
-                       5.Atenciones
-                       6.Salir""");
-    String opcion = null;
-        do{
+        Scanner input = new Scanner(System.in);
+        boolean salir = false;
+        String opcion;
+        while (!salir) {
+            //menu
+            System.out.println("""
+                               1.Servicios
+                               2.Empleados
+                               3.Clientes
+                               4.Citas
+                               5.Atenciones
+                               6.Salir""");
             opcion = input.nextLine();
-            //opcion 1 Servicios
-            switch(opcion){
+            switch (opcion) {
+                //opcion 1 Servicios
                 case "1":
                     //Recorro la lista con los objetos de clase Servicio
                     for(Servicio servicio: servicios){
@@ -119,31 +120,19 @@ public class ProyectoPoo {
                         }
                     }
                     break;
-                    }
+                case "4":
+                    System.out.println("""
+                                       1. Crear Cita
+                                       2. Eliminar Cita
+                                       3. Consultar citas por fecha""");
+                case "5":
+                    System.out.println("""
+                                       1. Registrar atención
+                                       2. Consultar atención""");
+                case "6"://Salimos del sistema
+                    System.out.println("Gracias por su visita");
             }
-
+        input.close();
+        }
     }
-    //opcion 4 Citas
-    if(opcion == "4"){
-      System.out.println("""
-                         1. Crear Cita
-                         2. Eliminar Cita
-                         3. COnsultar citas for fecha""");
-    }
-
-    
-    //opcion 5 Atenciones
-    if(opcion == "5"){
-      System.out.println("""
-                         1. Registrar atención
-                         2. Consultar atención""");
-    }
-    
-    
-    //opcion 6 Salir
-    if(opcion == "6"){
-      System.out.println("Gracias por su visita");
-    }
-    input.close();
-  }
 }
