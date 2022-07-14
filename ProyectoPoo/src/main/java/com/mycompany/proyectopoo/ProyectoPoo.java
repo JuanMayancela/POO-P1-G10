@@ -23,87 +23,104 @@ public class ProyectoPoo {
                        5.Atenciones
                        6.Salir""");
     String opcion = null;
-    do{
-        opcion = input.nextLine();
-        //opcion 1 Servicios
-        switch(opcion){
-            case "1":
-                //Recorro la lista con los objetos de clase Servicio
-                for(Servicio servicio: servicios){
-                    System.out.println(servicio);//muestro cada uno de los servicios
-                }
-                //Se podrán agregar servicios, editar y eliminar(Submenu)
-                //submenu
-                System.out.println("""
-                       1.Agregar Servicios
-                       2.Editar Servicios
-                       3.Eliminar Servicios""");
-                String opServ = null;
-                do{
-                    opServ = input.nextLine();
-                switch(opServ){
-                        case "1":
-                        agregarServicio();
-                        break;
-                        case "2":
-                        editarServicio();
-                        break;
-                        case "3":
-                        eliminarServicio();
-                        break;
-                  }
-                }
-                break;
-            case "2":
-                //Recorro la lista con los objetos de clase Empleado
-                for(Empleado empleado: empleados){
-                    System.out.println(empleado);//muestro cada uno de los empleados
-                }
-                //Se podrán agregar empleados, editar y eliminar
-                //submenu
-                System.out.println("""
-                       1.Agregar Empleados
-                       2.Editar Empleados
-                       3.Eliminar Empleados""");
-                String opEmp = null;
-                do{
-                    opEmp = input.nextLine();
-                switch(opEmp){
-                        case "1":
-                        agregarEmpleado();
-                        break;
-                        case "2":
-                        editarEmpleado();
-                        break;
-                        case "3":
-                        eliminarEmpleado();
-                        break;
-                  }                
-                break;
-           case "3":
-                //Recorro la lista con los objetos de clase Cliente
-                for(Cliente cliente: clientes){
-                    System.out.println(cliente);//muestro cada uno de los clientes 
-                }
-                //Se podrán agregar clientes y editar (todos los campos menos la cédula) 
-                //submenu
-                System.out.println("""
-                       1.Agregar Clientes
-                       2.Editar Clientes""");
-                String opCl = null;
-                do{
-                    opCl = input.nextLine();
-                switch(opCl){
-                        case "1":
-                        agregarCliente();
-                        break;
-                        case "2":
-                        editarCliente();
-                        break;
-                  }   
-                break;
-    }
-    
+        do{
+            opcion = input.nextLine();
+            //opcion 1 Servicios
+            switch(opcion){
+                case "1":
+                    //Recorro la lista con los objetos de clase Servicio
+                    for(Servicio servicio: servicios){
+                        System.out.println(servicio);//muestro cada uno de los servicios
+                    }
+                    boolean salir1 = false;
+                    String opServ;
+                    while(!salir1){
+                        //Se podrán agregar servicios, editar y eliminar(Submenu)
+                        //submenu
+                        System.out.println("""
+                                           1.Agregar Servicios
+                                           2.Editar Servicios
+                                           3.Eliminar Servicios
+                                           4.Salir""");
+                        opServ = input.nextLine();
+
+                        switch(opServ){
+                            case "1":
+                                agregarServicio();
+                                break;
+                            case "2":
+                                editarServicio();
+                                break;
+                            case "3":
+                                eliminarServicio();
+                                break;
+                            case "4":
+                                salir1 = true;
+                        }
+                    }
+                    break;
+                case "2":
+                    //Recorro la lista con los objetos de clase Empleado
+                    for(Empleado empleado: empleados){
+                        System.out.println(empleado);//muestro cada uno de los empleados
+                    }   
+                    boolean salir2 = false;
+                    String opEmp;
+                    while(!salir2){
+                        //Se podrán agregar empleados, editar y eliminar(Submenu)
+                        //submenu
+                        System.out.println("""
+                                           1.Agregar Empleados
+                                           2.Editar Empleados
+                                           3.Eliminar Empleados
+                                           4.Salir""");
+                        opEmp = input.nextLine();
+
+                        switch(opEmp){
+                            case "1":
+                                agregarEmpleado();
+                                break;
+                            case "2":
+                                editarEmpleado();
+                                break;
+                            case "3":
+                                eliminarEmpleado();
+                                break;
+                            case "4":
+                                salir2 = true;
+                        }
+                    }
+                    break;
+                case "3":
+                    //Recorro la lista con los objetos de clase Cliente
+                    for(Cliente cliente: clientes){
+                        System.out.println(cliente);//muestro cada uno de los clientes 
+                    }   
+                    boolean salir3 = false;
+                    String opCl;
+                    while(!salir3){
+                        //Se podrán agregar clientes y editar (todos los campos menos la cédula) 
+                        //submenu
+                        System.out.println("""
+                                           1.Agregar Clientes
+                                           2.Editar Clientes
+                                           3.Salir""");
+                        opCl = input.nextLine();
+
+                        switch(opCl){
+                            case "1":
+                                agregarCliente();
+                                break;
+                            case "2":
+                                editarCliente();
+                                break;
+                            case "3":
+                                salir3 = true;
+                        }
+                    }
+                    break;
+                    }
+            }
 
     }
     //opcion 4 Citas
