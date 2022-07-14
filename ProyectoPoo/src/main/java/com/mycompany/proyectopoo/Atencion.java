@@ -48,7 +48,6 @@ public class Atencion {
     }
     //Hacemos sobrecarga de metodos
     //Consultar atencion con la cedula del empleado
-     public void consultarAtencion() {
-        
+     public void consultarAtencion(String cedula) {
     }
 }

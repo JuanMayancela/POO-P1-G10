@@ -73,7 +73,7 @@ public class Cita {
          System.out.println("Ingrese la fecha a consultar ");
          String fechaConsultar = sc.nextLine();
          if(fecha.equals(fechaConsultar)){
-             System.out.println("");
+             System.out.println();
          }
     }
     sc.close();
