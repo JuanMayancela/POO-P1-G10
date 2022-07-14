@@ -55,17 +55,21 @@ public class Cita {
         this.citasPendientes = citasPendientes;
         this.perEncargada = perEncargada;
     }
+    Scanner sc = new Scanner(System.in);
     //metodo crearCita
      public void crearCita(String fecha, String hora, nomServicio nomServicio, Empleado perEncargada) {
         
     }
      //metodo eliminarCita
-     public void eliminarCita(String cedula) {
-        
+     public void eliminarCita() {
+         System.out.println("Ingrese su cedula: ");
+         String cedula = sc.nextLine();
+         //Mostrar citas pendientes
+         
     }
      //metodo consultarCita
      public void consultarCita() {
-         Scanner sc = new Scanner(System.in);
+         
          System.out.println("Ingrese la fecha a consultar ");
          String fechaConsultar = sc.nextLine();
          if(fecha.equals(fechaConsultar)){
