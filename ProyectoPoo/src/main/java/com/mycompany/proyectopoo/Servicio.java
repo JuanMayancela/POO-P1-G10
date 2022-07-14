@@ -12,7 +12,7 @@ package com.mycompany.proyectopoo;
 public class Servicio {
     private nomServicio nomServicio;
     private String duAtencion;
-    private Double precio;
+    private double precio;
     private String estado;
     
 // getters y setters
@@ -32,11 +32,11 @@ public class Servicio {
         this.duAtencion = duAtencion;
     }
 
-    public Double getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(Double precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
@@ -49,7 +49,7 @@ public class Servicio {
     }
 
   //Constructor
-    public Servicio(nomServicio nomServicio, String duAtencion, Double precio, String estado) {
+    public Servicio(nomServicio nomServicio, String duAtencion, double precio, String estado) {
         this.nomServicio = nomServicio;
         this.duAtencion = duAtencion;
         this.precio = precio;
