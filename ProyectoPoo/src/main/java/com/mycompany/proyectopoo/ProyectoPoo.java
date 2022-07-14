@@ -45,7 +45,7 @@ public class ProyectoPoo {
         
     }
     //opcion 3 Clientes
-    if(opcion == "3"){
+    else if(opcion == "3"){
         //Recorro la lista con los objetos de clase Cliente
         for(Cliente cliente: clientes){
             System.out.println(cliente);//muestro cada uno de los clientes
@@ -53,7 +53,7 @@ public class ProyectoPoo {
         
     }
     //opcion 4 Citas
-    if(opcion == "4"){
+    else if(opcion == "4"){
       System.out.println("""
                          1. Crear Cita
                          2. Eliminar Cita
@@ -62,7 +62,7 @@ public class ProyectoPoo {
 
     
     //opcion 5 Atenciones
-    if(opcion == "5"){
+    else if(opcion == "5"){
       System.out.println("""
                          1. Registrar atención
                          2. Consultar atención""");
@@ -70,7 +70,7 @@ public class ProyectoPoo {
     
     
     //opcion 6 Salir
-    if(opcion == "6"){
+    else if(opcion == "6"){
       System.out.println("Gracias por su visita");
     }
     input.close();
