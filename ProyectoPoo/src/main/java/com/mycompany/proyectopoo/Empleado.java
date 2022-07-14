@@ -22,4 +22,12 @@ public class Empleado extends Persona {
     public void eliminarEmpleado(){
         estado = "Inactivo";
     }
+    //agregar empleado
+    public void agregarEmpleado(){
+        
+    }
+    //editarEmpleado
+    public void editarEmpleado(){
+        
+    }
 }
