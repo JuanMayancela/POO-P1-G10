@@ -12,8 +12,8 @@ public class Cliente extends Persona {
     private String datosRepresentante;
     
     //Constructor
-    public Cliente(char cedula, String nombre, char telefono, String email, String datosRepresentante){
-        super(cedula, nombre, telefono, email);//constructor de la clase Persona
+    public Cliente(String nombre, String email, String cedula, String telefono, String datosRepresentante){
+        super(nombre, email, cedula, telefono);//constructor de la clase Persona
         this.datosRepresentante = datosRepresentante;
     }
     

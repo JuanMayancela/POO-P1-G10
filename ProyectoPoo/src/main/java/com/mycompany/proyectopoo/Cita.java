@@ -15,6 +15,7 @@ public class Cita {
     private int citasPendientes;
     private Empleado perEncargada; 
 
+    //set&get
     public String getFecha() {
         return fecha;
     }
@@ -46,30 +47,27 @@ public class Cita {
     public void setPerEncargada(Empleado perEncargada) {
         this.perEncargada = perEncargada;
     }
-
+    //
+    //constructor de clase
     public Cita(String fecha, String hora, int citasPendientes, Empleado perEncargada) {
         this.fecha = fecha;
         this.hora = hora;
         this.citasPendientes = citasPendientes;
         this.perEncargada = perEncargada;
     }
-    
-     public void crearCita() {
+    //metodo crearCita
+     public void crearCita(String fecha, String hora, nomServicio nomServicio, Empleado perEncargada) {
         
     }
-     
-     public void eliminarCita() {
+     //metodo eliminarCita
+     public void eliminarCita(String cedula) {
         
     }
-     
+     //metodo consultarCita
      public void consultarCita(String fechaConsultar) {
+         System.out.println("Ingrese la fecha deseada: ");
          if(fecha.equals(fechaConsultar)){
-             System.out.println("")
-         
+             System.out.println("");
          }
-        
     }
-    
-    
-    
 }

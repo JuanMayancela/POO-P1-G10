@@ -25,11 +25,20 @@ public class ProyectoPoo {
     String opcion = input.nextLine();
     
     //opcion 1 Servicios
-    
+    if(opcion == "1"){
+        
+        
+    }
     //opcion 2 Empleados
-    
+    if(opcion == "2"){
+        
+        
+    }
     //opcion 3 Clientes
-    
+    if(opcion == "3"){
+        
+        
+    }
     //opcion 4 Citas
     if(opcion == "4"){
       System.out.println("""
@@ -45,7 +54,7 @@ public class ProyectoPoo {
                          1. Registrar atención
                          2. Consultar atención""");
     }
-
+    
     
     //opcion 6 Salir
     if(opcion == "6"){

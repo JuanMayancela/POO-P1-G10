@@ -8,7 +8,7 @@ package com.mycompany.proyectopoo;
  *
  * @author ArianaGonzabay
  */
-public class nomServicio {
+public enum nomServicio {
     Terapia_de_Lenguaje,
     Terapia_Psicopedagogica
 }

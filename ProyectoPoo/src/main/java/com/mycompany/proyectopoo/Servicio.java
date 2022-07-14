@@ -10,17 +10,17 @@ package com.mycompany.proyectopoo;
  * @author JuanMayancela
  */
 public class Servicio {
-    private String nomServicio;
+    private nomServicio nomServicio;
     private String duAtencion;
     private Double precio;
     private String estado;
     
 // getters y setters
-    public String getNomServicio() {
+    public nomServicio getNomServicio() {
         return nomServicio;
     }
 
-    public void setNomServicio(String nomServicio) {
+    public void setNomServicio(nomServicio nomServicio) {
         this.nomServicio = nomServicio;
     }
 
@@ -49,13 +49,12 @@ public class Servicio {
     }
 
   //Constructor
-    public Servicio(String nomServicio, String duAtencion, Double precio, String estado) {
+    public Servicio(nomServicio nomServicio, String duAtencion, Double precio, String estado) {
         this.nomServicio = nomServicio;
         this.duAtencion = duAtencion;
         this.precio = precio;
         this.estado = estado;
     }
-    
     
     //Metodo agregar Servicio
     public void agregarServicio(){

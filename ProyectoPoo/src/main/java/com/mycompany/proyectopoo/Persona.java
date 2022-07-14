@@ -9,8 +9,15 @@ package com.mycompany.proyectopoo;
  * @author Usuario
  */
 public class Persona {
-    private String nombre, email;
-    private char cedula, telefono;
+    private String nombre, email, cedula, telefono;
+    
+    
+    public Persona(String nombre, String email, String cedula, String telefono){
+        this.nombre = nombre;
+        this.email = email;
+        this.cedula = cedula;
+        this.telefono = telefono;
+    }
     
     //Getters y Setters
 
@@ -30,19 +37,19 @@ public class Persona {
         this.email = email;
     }
 
-    public char getCedula() {
+    public String getCedula() {
         return cedula;
     }
 
-    public void setCedula(char cedula) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
 
-    public char getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(char telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
     

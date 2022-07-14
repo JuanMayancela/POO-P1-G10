@@ -43,7 +43,7 @@ public class Atencion {
         this.empleadoAtencion = empleadoAtencion;
     }
     
-     public void registrarAtencion() {
+     public void registrarAtencion(String cedula, String duracionAtencion, Empleado empleadoAtencion) {
         
     }
     //Hacemos sobrecarga de metodos
@@ -51,14 +51,4 @@ public class Atencion {
      public void consultarAtencion() {
         
     }
-    //Consultar atencion con la cedula del cliente
-    public void consultarAtencion() {
-        
-    }
-    //Consultar atencion con la fecha
-    public void consultarAtencion() {
-        
-    }
-    
-    
 }
