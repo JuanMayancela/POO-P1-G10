@@ -10,8 +10,8 @@ package com.mycompany.proyectopoo.data;
  */
 public abstract class Persona {
 
-    protected String nombre, email;
-    protected String cedula, telefono;
+    private String nombre, email;
+    private String cedula, telefono;
     
     //Constructor
     public Persona(String nombre, String email, String cedula, String telefono) {
