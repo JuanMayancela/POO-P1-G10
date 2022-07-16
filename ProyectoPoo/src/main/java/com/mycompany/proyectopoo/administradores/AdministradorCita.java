@@ -26,10 +26,11 @@ public class AdministradorCita {
        this.citas = new ArrayList<>();
        
        this.input = input;
-       Empleado emple = new Empleado();
+       Empleado emple1 = new Empleado("0955476128", "Samuel", "0989741246", "samuel@hotmail.com", "Activo");
+       Empleado emple2 = new Empleado("2450886572", "John", "0964457823", "john@hotmail.com", "Activo");
        //se crean los objetos de clase cita y se los agregan a la lista citas
-       this.citas.add(new Cita("16/7/20022", "12:30", 1,emple));
-       this.citas.add(new Cita("15/7/20022", "14h30", 1,emple));
+       this.citas.add(new Cita("16/7/20022", "12:30", 1,emple1));
+       this.citas.add(new Cita("15/7/20022", "14h30", 1,emple2));
  
     }
     
