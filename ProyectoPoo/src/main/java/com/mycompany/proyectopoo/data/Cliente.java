@@ -13,12 +13,25 @@ public class Cliente extends Persona {
    
     //lista de clientes
     
+    
     //Constructor
+    
+     public Cliente(){
+         super("","","","");
+    
+    }
 
     public Cliente(String cedula, String nombre, String telefono, String email, String datosRepresentante){
         super(nombre,email, cedula, telefono);//constructor de la clase Persona
 
         this.datosRepresentante = datosRepresentante;
+    }
+    
+    @Override
+      public String toString() {
+       return String.format("Nombre: %s ,email: %s ,cedula: %s ,telefono: %s ,datosRepresentante: %s", 
+            nombre, email, cedula, telefono, datosRepresentante); 
+      
     }
     
     public String getDatosRepresentante(){

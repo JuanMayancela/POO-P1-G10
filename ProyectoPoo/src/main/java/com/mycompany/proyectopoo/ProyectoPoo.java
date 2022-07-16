@@ -6,6 +6,9 @@
 package com.mycompany.proyectopoo;
 import com.mycompany.proyectopoo.administradores.AdministradorEmpleado;
 import com.mycompany.proyectopoo.administradores.AdministradorServicio;
+import com.mycompany.proyectopoo.administradores.AdministradorCliente;
+import com.mycompany.proyectopoo.administradores.AdministradorCita;
+import com.mycompany.proyectopoo.administradores.AdministradorAtencion;
 import java.util.Scanner;
 
 /**
@@ -18,11 +21,17 @@ public class ProyectoPoo {
     
     private static AdministradorServicio servicioAdmin;
     private static AdministradorEmpleado empleadoAdmin;
+    private static AdministradorCliente clienteAdmin;
+    private static AdministradorCita citaAdmin;
+    private static AdministradorAtencion atencionAdmin;
     
     public static void inicilizarSistema(){
         
         servicioAdmin = new AdministradorServicio(input);
         empleadoAdmin = new AdministradorEmpleado(input);
+        clienteAdmin = new AdministradorCliente(input);
+        citaAdmin = new AdministradorCita(input);
+        atencionAdmin = new AdministradorAtencion(input);
     
     
     }
@@ -46,10 +55,22 @@ public class ProyectoPoo {
                 case '1':
                     servicioAdmin.menuServicio();
                     break;
+                    
                 case '2':
                     empleadoAdmin.menuEmpleado();
                     break;
-                
+                    
+                case '3':
+                    clienteAdmin.menuCliente();
+                    break;
+                    
+                case '4':
+                    citaAdmin.SubmenuCitas();
+                    break;
+                    
+                case '5':
+                    atencionAdmin.SubmenuAtenciones();
+                    break;
                      
                 case '6':
                     return;

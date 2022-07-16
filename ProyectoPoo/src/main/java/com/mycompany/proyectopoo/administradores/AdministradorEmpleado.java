@@ -5,7 +5,7 @@
 package com.mycompany.proyectopoo.administradores;
 
 import com.mycompany.proyectopoo.data.Empleado;
-import com.mycompany.proyectopoo.data.Servicio;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -25,12 +25,12 @@ public class AdministradorEmpleado {
     public AdministradorEmpleado(Scanner input) {
        this.empleados = new ArrayList<>();
        this.input = input;
-       //this.servicios.add(new Servicio("comer","3 horas", 22.0, "Activo"));
-       this.empleados.add(new Empleado("0705398184", "Carlos", "0988", "carlos@hotmail.com", "Activo"));
+       
+       this.empleados.add(new Empleado("0705398184", "Carlos", "0989671287", "carlos@hotmail.com", "Activo"));
  
     }
     
-     //metodo para recorrer la lista de los servicios
+     //metodo para recorrer la lista de los empleados
       public void listaEmpleado() {
           System.out.println("\nLos Empleados existentes son: ");
           if(!empleados.isEmpty()){
@@ -59,7 +59,7 @@ public class AdministradorEmpleado {
         empleado.setCedula(input.nextLine());
         
 
-        System.out.println("\tIngrese el telelfono del empleado: ");
+        System.out.println("\tIngrese el telefono del empleado: ");
         empleado.setTelefono(input.nextLine());
         
         System.out.println("\tIngrese el estado del empleado: ");
@@ -93,10 +93,50 @@ public class AdministradorEmpleado {
     }
     
     public void editarEmpleado(){ 
+        
+        listaEmpleado();
+      
+        int nPosicion;
+ 
+        System.out.println("Ingrese el número del empleado a editar: ");
+       
+        nPosicion = input.nextInt();
+        input.nextLine();
+        
+        
+        if(nPosicion > empleados.size()){
+          
+            System.out.println("El número de empleado es incorrecto");
+            
+        }else if(nPosicion > 0){
+           
+            System.out.println("Ingrese los datos del nuevo empleado:");
+            empleados.set(nPosicion-1, modificarEmple(empleados.get(nPosicion - 1)));
+            listaEmpleado();
+        }
+        
     
     }
     
     public void eliminarEmpleado(){ 
+        
+        listaEmpleado();
+        int nPosicion;
+ 
+        System.out.println("Ingrese el número del empleado a editar: ");
+       
+        nPosicion = input.nextInt();
+        input.nextLine();
+        if(nPosicion > empleados.size()){
+          
+            System.out.println("El número de empleado es incorrecto");
+        }else if(nPosicion > 0){
+           
+            System.out.println("Ingrese el nuevo estado del empleado:");
+            empleados.get(nPosicion - 1).setEstado(input.nextLine());
+            listaEmpleado();
+      
+        }    
     
     }
     

@@ -15,10 +15,10 @@ import com.mycompany.proyectopoo.data.Empleado;
  */
 public class Cita {
     
-    private String fecha;
-    private String hora;
-    private int citasPendientes;
-    private Empleado perEncargada; 
+    protected String fecha;
+    protected String hora;
+    protected int citasPendientes;
+    protected Empleado perEncargada; 
 
     //set&get
     public String getFecha() {
@@ -54,6 +54,11 @@ public class Cita {
     }
     //
     //constructor de clase
+    public Cita(){
+         
+    
+    }
+    
     public Cita(String fecha, String hora, int citasPendientes, Empleado perEncargada) {
         this.fecha = fecha;
         this.hora = hora;
@@ -61,33 +66,11 @@ public class Cita {
         this.perEncargada = perEncargada;
     }
     
-    //metodo crearCita
-     public void crearCita(String fecha, String hora, String nomServicio, Empleado perEncargada) {
-        
+     @Override
+    public String toString() {
+        return String.format("Fecha: %s ,Hora: %s ", 
+            fecha, hora, citasPendientes, perEncargada); 
     }
-     //metodo eliminarCita
-     public void eliminarCita() {
-
-        
-    }
-     
-     public void consultarCita(String fechaConsultar) {
-         if(fecha.equals(fechaConsultar)){
-             System.out.println("");
-
-         
-    }
-     //metodo consultarCita
-     /**public void consultarCita() {
-         
-         System.out.println("Ingrese la fecha a consultar ");
-         String fechaConsultar = sc.nextLine();
-         if(fecha.equals(fechaConsultar)){
-             System.out.println();
-         }
-    }
-        sc.close();**/
-}
-     
+    
 }
      

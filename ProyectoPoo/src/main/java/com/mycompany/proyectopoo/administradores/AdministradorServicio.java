@@ -26,8 +26,9 @@ public class AdministradorServicio {
     public AdministradorServicio(Scanner input) {
        this.servicios = new ArrayList<>();
        this.input = input;
-       this.servicios.add(new Servicio("comer","3 horas", 22.0, "Activo"));
-       this.servicios.add(new Servicio("vender","3 horas", 22.0, "Activo"));
+       this.servicios.add(new Servicio("Terapia_de_Lenguaje","2:00", 22.5, "Activo"));
+       this.servicios.add(new Servicio("Terapia_Psicopedagogica","1:30", 30.50, "Activo"));
+       this.servicios.add(new Servicio("Terapia_Fisica","2:30", 40.0, "Activo"));
  
     }
     
