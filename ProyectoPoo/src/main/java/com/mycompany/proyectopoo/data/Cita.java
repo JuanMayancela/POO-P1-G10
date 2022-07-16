@@ -52,13 +52,8 @@ public class Cita {
     public void setPerEncargada(Empleado perEncargada) {
         this.perEncargada = perEncargada;
     }
-    //
+
     //constructor de clase
-    public Cita(){
-         
-    
-    }
-    
     public Cita(String fecha, String hora, int citasPendientes, Empleado perEncargada) {
         this.fecha = fecha;
         this.hora = hora;
@@ -66,7 +61,8 @@ public class Cita {
         this.perEncargada = perEncargada;
     }
     
-     @Override
+    //Se sobreescribe el metodo toString()
+    @Override
     public String toString() {
         return String.format("Fecha: %s ,Hora: %s ", 
             fecha, hora, citasPendientes, perEncargada); 
