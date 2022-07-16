@@ -14,7 +14,8 @@ public class Atencion {
     private String duracionAtencion;
     private Servicio registroServicio;
     private Empleado empleadoAtencion; 
-
+    
+    //Getters y setters
     public String getDuracionAtencion() {
         return duracionAtencion;
     }
@@ -38,7 +39,7 @@ public class Atencion {
     public void setEmpleadoAtencion(Empleado empleadoAtencion) {
         this.empleadoAtencion = empleadoAtencion;
     }
-
+    //Constructor
     public Atencion(String duracionAtencion, Servicio registroServicio, Empleado empleadoAtencion) {
         this.duracionAtencion = duracionAtencion;
         this.registroServicio = registroServicio;
