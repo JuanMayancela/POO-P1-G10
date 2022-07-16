@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.proyectopoo;
+package com.mycompany.proyectopoo.data;
+
+import com.mycompany.proyectopoo.data.Empleado;
 
 /**
  *
@@ -64,7 +66,7 @@ public class Cita {
      
      public void consultarCita(String fechaConsultar) {
          if(fecha.equals(fechaConsultar)){
-             System.out.println("")
+             System.out.println("");
          
          }
         

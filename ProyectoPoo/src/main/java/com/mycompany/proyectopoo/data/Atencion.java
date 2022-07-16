@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.proyectopoo;
+package com.mycompany.proyectopoo.data;
+
+import com.mycompany.proyectopoo.data.Empleado;
 
 /**
  *
@@ -52,13 +54,13 @@ public class Atencion {
         
     }
     //Consultar atencion con la cedula del cliente
-    public void consultarAtencion() {
+    //public void consultarAtencion() {
         
-    }
+    //}
     //Consultar atencion con la fecha
-    public void consultarAtencion() {
+    //public void consultarAtencion() {
         
-    }
+   // }
     
     
 }

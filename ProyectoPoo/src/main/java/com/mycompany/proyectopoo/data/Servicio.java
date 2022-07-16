@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.proyectopoo;
+package com.mycompany.proyectopoo.data;
 import java.util.ArrayList;
 import java.util.Scanner;
 /**
@@ -68,7 +68,8 @@ public class Servicio {
     
     @Override
       public String toString() {
-       return nomServicio; 
+       return String.format("Nombre: %s ,Precio: %f ,Duracion: %s ,Estado: %s", 
+            nomServicio, precio, duAtencion, estado); 
       
     }
     

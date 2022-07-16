@@ -4,6 +4,8 @@
  */
 
 package com.mycompany.proyectopoo;
+import com.mycompany.proyectopoo.administradores.AdministradorEmpleado;
+import com.mycompany.proyectopoo.administradores.AdministradorServicio;
 import java.util.Scanner;
 
 /**
@@ -11,46 +13,46 @@ import java.util.Scanner;
  * @author Usuario
  */
 public class ProyectoPoo {
+    static Scanner input = new Scanner(System.in);
+    public static char respuesta = '1';
+    
 
     public static void main(String[] args) {
-    Scanner input = new Scanner(System.in);
-    //menu
-    System.out.println("""
-                       1.Servicios
-                       2.Empleados
-                       3.Clientes
-                       4.Citas
-                       5.Atenciones
-                       6.Salir""");
-    String opcion = input.nextLine();
-    
-    //opcion 1 Servicios
-    
-    //opcion 2 Empleados
-    
-    //opcion 3 Clientes
-    
-    //opcion 4 Citas
-    if(opcion == "4"){
-      System.out.println("""
-                         1. Crear Cita
-                         2. Eliminar Cita
-                         3. COnsultar citas for fecha""");
-    }
+        AdministradorServicio servicioAdmin = new AdministradorServicio(input);
+        AdministradorEmpleado empleadoAdmin = new AdministradorEmpleado(input);
+   
+   
+        while(respuesta != '6'){
 
-    
-    //opcion 5 Atenciones
-    if(opcion == "5"){
-      System.out.println("""
-                         1. Registrar atención
-                         2. Consultar atención""");
-    }
+            //menu
+            System.out.println("""
+                               1.Servicios
+                               2.Empleados
+                               3.Clientes
+                               4.Citas
+                               5.Atenciones
+                               6.Salir""");
+            respuesta = input.nextLine().charAt(0);
+            switch(respuesta){
+                case '1':
+                    servicioAdmin.menuServicio();
+                    break;
+                case '2':
+                    empleadoAdmin.menuEmpleado();
+                    break;
+                
+                     
+                case '6':
+                    return;
+                default :
+                    System.out.println("La opcion es incorrecta");
 
-    
-    //opcion 6 Salir
-    if(opcion == "6"){
-      System.out.println("Gracias por su visita");
+            }
+        }
+
     }
-    input.close();
-  }
+    
+    
+    
+    
 }

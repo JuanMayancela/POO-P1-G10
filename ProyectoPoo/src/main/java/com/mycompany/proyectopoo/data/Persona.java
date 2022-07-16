@@ -2,15 +2,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.proyectopoo;
+package com.mycompany.proyectopoo.data;
 
 /**
  *
  * @author Usuario
  */
 public class Persona {
-    private String nombre, email;
-    private char cedula, telefono;
+    protected String nombre, email;
+    protected String cedula, telefono;
+
+    public Persona(String nombre, String email, String cedula, String telefono) {
+        this.nombre = nombre;
+        this.email = email;
+        this.cedula = cedula;
+        this.telefono = telefono;
+    }
     
     //Getters y Setters
 
@@ -30,19 +37,19 @@ public class Persona {
         this.email = email;
     }
 
-    public char getCedula() {
+    public String getCedula() {
         return cedula;
     }
 
-    public void setCedula(char cedula) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
 
-    public char getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(char telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
     

@@ -4,14 +4,21 @@
  */
 package com.mycompany.proyectopoo;
 
+import com.mycompany.proyectopoo.data.Cliente;
+import com.mycompany.proyectopoo.data.Empleado;
+import com.mycompany.proyectopoo.data.Servicio;
+import java.util.ArrayList;
+import java.util.List;
+
+
 /**
  *
  * @author JuanMayancela
  */
 public class Sistema {
-    public static ArrayList<Empleado> empleados;
-    public static ArrayList<Cliente> clientes;
-    public static ArrayList<Servicio> servicios;
+    public static List<Empleado> empleados;
+    public static List<Cliente> clientes;
+    public static List<Servicio> servicios;
     
     //Metodo inicializar sistema
     public static void inicializarSistema(){
