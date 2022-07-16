@@ -83,9 +83,9 @@ public class AdministradorCita {
         while(respuesta != '4'){
         
             System.out.println("""
-                1.Agregar Empleado
-                2.Editar Empleado
-                3.Eliminar Empleado
+                1.Crear Cita
+                2.Eliminar Cita
+                3.Consultar citas por Fecha
                 4.Salir
                 """);
 
