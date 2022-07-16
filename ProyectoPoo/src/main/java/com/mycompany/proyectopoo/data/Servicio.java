@@ -15,12 +15,6 @@ public class Servicio {
     private double precio;
     private String estado;
 
-    public Servicio(){
-    
-    
-    }
-
-   
 // getters y setters
     public String getNomServicio() {
         return nomServicio;
@@ -54,28 +48,22 @@ public class Servicio {
         this.estado = estado;
     }
 
-  
-
   //Constructor
     public Servicio(String nomServicio, String duAtencion, double precio, String estado) {
         this.nomServicio = nomServicio;
         this.duAtencion = duAtencion;
         this.precio = precio;
-        this.estado = estado;
-        
-        
+        this.estado = estado; 
     }
     
-
+    //Se sobreescribe el metodo toString()
     @Override
       public String toString() {
        return String.format("Nombre: %s ,Precio: %f ,Duracion: %s ,Estado: %s", 
             nomServicio, precio, duAtencion, estado); 
-      
     }
     
-
-    }
+}
     
    
 
