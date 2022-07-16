@@ -26,16 +26,15 @@ public class AdministradorServicio {
     public AdministradorServicio(Scanner input) {
        this.servicios = new ArrayList<>();
        this.input = input;
+       //se crean los objetos de tipo Servicio y se los agregan a la lista servicios
        this.servicios.add(new Servicio("Terapia_de_Lenguaje","2:00", 22.5, "Activo"));
        this.servicios.add(new Servicio("Terapia_Psicopedagogica","1:30", 30.50, "Activo"));
        this.servicios.add(new Servicio("Terapia_Fisica","2:30", 40.0, "Activo"));
  
     }
     
-   
     
-    
-   //metodo para recorrer la lista de los servicios
+      //metodo para recorrer la lista de los servicios y mostrarlos
       public void listaServicio() {
           System.out.println("\nLos Servicios existentes son: ");
           if(!servicios.isEmpty()){
@@ -44,21 +43,13 @@ public class AdministradorServicio {
                 System.out.printf("%d) %s\n", i+1, servicios.get(i));
       
             }
-             
-          
-          
           }else{
                     
-                System.out.printf("no esxisten servicios");
-                     
-            }
-        
+                System.out.printf("no esxisten servicios");       
+            } 
     }
       
     //Metodo agregar Servicio
-      
-    
-    
     public void agregarServicio(){
         
     
@@ -83,7 +74,8 @@ public class AdministradorServicio {
  
         }
     
-    private Servicio modificarSer(Servicio servicio){ 
+    //Metodo Modificar servicio
+    public Servicio modificarSer(Servicio servicio){ 
         
         System.out.println("\tIngrese el nombre del servicio: ");
         servicio.setNomServicio(input.nextLine());
@@ -102,7 +94,7 @@ public class AdministradorServicio {
         
     }
     
-     //Metodo editar Servicio
+    //Metodo editar Servicio
     public void editarServicio(){
       
         listaServicio();
@@ -154,7 +146,7 @@ public class AdministradorServicio {
     }
     
     
-    
+    //Menu Servicio
     public void menuServicio(){
         
         respuesta = '1';
