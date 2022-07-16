@@ -24,12 +24,12 @@ public class AdministradorCliente {
     public AdministradorCliente(Scanner input) {
        this.clientes = new ArrayList<>();
        this.input = input;
-       
+       //se crean los objetos de coase Cliente y se los agregan a la lista clientes
        this.clientes.add(new Cliente("0707398184", "Alberto", "0979651157", "alberto@hotmail.com", "Activo"));
        this.clientes.add(new Cliente("0705682196", "Juan", "0998672356", "juan@hotmail.com", "Activo"));
     }
     
-     //metodo para recorrer la lista de los clientes
+    //metodo para recorrer la lista de los clientes y mostrarlos
     public void listaClientes() {
         System.out.println("\nLos Clientes existentes son: ");
             if(!clientes.isEmpty()){
