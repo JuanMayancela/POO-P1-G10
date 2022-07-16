@@ -12,7 +12,8 @@ public abstract class Persona {
 
     protected String nombre, email;
     protected String cedula, telefono;
-
+    
+    //Constructor
     public Persona(String nombre, String email, String cedula, String telefono) {
 
         this.nombre = nombre;
@@ -54,15 +55,11 @@ public abstract class Persona {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-    
-    public void eliminarPersona(){
-    
-    }
-    
-    //metodos abstractos
-    public abstract void agregarPersona();
-    
-    public abstract void editarPersona();
-    
+
+    //Se sobreescribe el metodo toString()
+    @Override
+    public String toString() {
+        return String.format("Nombre: %s ,email: %s ,cedula: %s ,telefono: %s", nombre, email, cedula, telefono); 
+    }    
     
 }
