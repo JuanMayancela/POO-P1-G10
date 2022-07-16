@@ -27,13 +27,13 @@ public class AdministradorCita {
        
        this.input = input;
        Empleado emple = new Empleado();
-       
+       //se crean los objetos de clase cita y se los agregan a la lista citas
        this.citas.add(new Cita("16/7/20022", "12:30", 1,emple));
        this.citas.add(new Cita("15/7/20022", "14h30", 1,emple));
  
     }
     
-     //metodo para recorrer la lista de los clientes
+    //metodo para recorrer la lista de las citas y mostrarlas
     public void listaCitas() {
         System.out.println("\nLos Citas existentes son: ");
             if(!citas.isEmpty()){
