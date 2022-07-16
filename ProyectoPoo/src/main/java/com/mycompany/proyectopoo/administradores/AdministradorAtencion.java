@@ -5,6 +5,8 @@
 package com.mycompany.proyectopoo.administradores;
 
 import com.mycompany.proyectopoo.data.Atencion;
+import com.mycompany.proyectopoo.data.Empleado;
+import com.mycompany.proyectopoo.data.Servicio;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -24,8 +26,10 @@ public class AdministradorAtencion {
     public AdministradorAtencion(Scanner input) {
        this.atenciones = new ArrayList<>();
        this.input = input;
-       //this.servicios.add(new Servicio("comer","3 horas", 22.0, "Activo"));
-       this.atenciones.add(new Atencion("15/7/20022", "14h30", 1, empleado.setEmpleadoAtencion()));
+       Empleado emple = new Empleado();
+       Servicio ser = new Servicio();
+       
+       this.atenciones.add(new Atencion("0:10", ser, emple));
  
     }
     

@@ -24,9 +24,12 @@ public class AdministradorCita {
     //Constructor
     public AdministradorCita(Scanner input) {
        this.citas = new ArrayList<>();
+       
        this.input = input;
-       //this.servicios.add(new Servicio("comer","3 horas", 22.0, "Activo"));
-       this.citas.add(new Cita("15/7/20022", "14h30", 1, perEncargada.setPerEncargada()));
+       Empleado emple = new Empleado();
+       
+       this.citas.add(new Cita("16/7/20022", "12:30", 1,emple));
+       this.citas.add(new Cita("15/7/20022", "14h30", 1,emple));
  
     }
     

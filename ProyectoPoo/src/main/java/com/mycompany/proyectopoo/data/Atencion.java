@@ -5,14 +5,14 @@
 package com.mycompany.proyectopoo.data;
 
 import com.mycompany.proyectopoo.data.Empleado;
-
+import com.mycompany.proyectopoo.data.Servicio;
 /**
  *
  * @author mamay
  */
 public class Atencion {
     private String duracionAtencion;
-    private String registroServicio;
+    private Servicio registroServicio;
     private Empleado empleadoAtencion; 
 
     public String getDuracionAtencion() {
@@ -23,11 +23,11 @@ public class Atencion {
         this.duracionAtencion = duracionAtencion;
     }
 
-    public String getRegistroServicio() {
+    public Servicio getRegistroServicio() {
         return registroServicio;
     }
 
-    public void setRegistroServicio(String registroServicio) {
+    public void setRegistroServicio(Servicio registroServicio) {
         this.registroServicio = registroServicio;
     }
 
@@ -39,7 +39,7 @@ public class Atencion {
         this.empleadoAtencion = empleadoAtencion;
     }
 
-    public Atencion(String duracionAtencion, String registroServicio, Empleado empleadoAtencion) {
+    public Atencion(String duracionAtencion, Servicio registroServicio, Empleado empleadoAtencion) {
         this.duracionAtencion = duracionAtencion;
         this.registroServicio = registroServicio;
         this.empleadoAtencion = empleadoAtencion;
