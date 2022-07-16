@@ -55,11 +55,14 @@ public abstract class Persona {
         this.telefono = telefono;
     }
     
-    public abstract void agregarPersona(){
-        
+    public void eliminarPersona(){
+    
     }
     
-    public abstract void editarPersona(){
-        
-    }
+    //metodos abstractos
+    public abstract void agregarPersona();
+    
+    public abstract void editarPersona();
+    
+    
 }
