@@ -33,7 +33,7 @@ public class AdministradorAtencion {
  
     }
     
-     //metodo para recorrer la lista de los clientes
+    //metodo para recorrer la lista atenciones y mostrarla
     public void listaAtenciones() {
         System.out.println("\nLos Atenciones existentes son: ");
             if(!atenciones.isEmpty()){
