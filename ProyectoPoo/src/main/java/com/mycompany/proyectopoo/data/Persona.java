@@ -8,7 +8,7 @@ package com.mycompany.proyectopoo.data;
  *
  * @author Usuario
  */
-public class Persona {
+public abstract class Persona {
 
     protected String nombre, email;
     protected String cedula, telefono;
@@ -55,11 +55,11 @@ public class Persona {
         this.telefono = telefono;
     }
     
-    public void agregarPersona(){
+    public abstract void agregarPersona(){
         
     }
     
-    public void editarPersona(){
+    public abstract void editarPersona(){
         
     }
 }
