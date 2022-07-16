@@ -19,20 +19,16 @@ public class Empleado extends Persona {
         this.estado = estado;
     }
     
-    public Empleado(){
-         super("","","","");
-    
-    }
-
+    //Constructor
     public Empleado(String cedula, String nombre,String telefono, String email, String estado) {
-        super(nombre, email, cedula, telefono);
+        super(nombre, email, cedula, telefono);//llamamos  al constructor de la clase Padre que es Persona mediante super()
         this.estado = estado;
     }
     
+    //Se sobreescribe el metodo toString()
     @Override
-      public String toString() {
-       return String.format("Nombre: %s ,email: %s ,cedula: %s ,telefono: %s ,estado: %s", 
-            nombre, email, cedula, telefono, estado); 
-      
+    public String toString() {
+        //Agregamos al metodo toString de la clase Padre el estado del Empleado
+        return super.toString()+"Estado: "+estado;
     }
 }
