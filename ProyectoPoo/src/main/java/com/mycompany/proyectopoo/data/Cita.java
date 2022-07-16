@@ -2,9 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+
 package com.mycompany.proyectopoo.data;
 
 import com.mycompany.proyectopoo.data.Empleado;
+
+
 
 /**
  *
@@ -17,6 +20,7 @@ public class Cita {
     private int citasPendientes;
     private Empleado perEncargada; 
 
+    //set&get
     public String getFecha() {
         return fecha;
     }
@@ -48,7 +52,8 @@ public class Cita {
     public void setPerEncargada(Empleado perEncargada) {
         this.perEncargada = perEncargada;
     }
-
+    //
+    //constructor de clase
     public Cita(String fecha, String hora, int citasPendientes, Empleado perEncargada) {
         this.fecha = fecha;
         this.hora = hora;
@@ -56,22 +61,33 @@ public class Cita {
         this.perEncargada = perEncargada;
     }
     
-     public void crearCita() {
+    //metodo crearCita
+     public void crearCita(String fecha, String hora, String nomServicio, Empleado perEncargada) {
         
     }
-     
+     //metodo eliminarCita
      public void eliminarCita() {
+
         
     }
      
      public void consultarCita(String fechaConsultar) {
          if(fecha.equals(fechaConsultar)){
              System.out.println("");
+
          
-         }
-        
     }
-    
-    
-    
+     //metodo consultarCita
+     /**public void consultarCita() {
+         
+         System.out.println("Ingrese la fecha a consultar ");
+         String fechaConsultar = sc.nextLine();
+         if(fecha.equals(fechaConsultar)){
+             System.out.println();
+         }
+    }
+        sc.close();**/
 }
+     
+}
+     

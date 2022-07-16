@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Servicio {
     private String nomServicio;
     private String duAtencion;
-    private Double precio;
+    private double precio;
     private String estado;
 
     public Servicio(){
@@ -38,11 +38,11 @@ public class Servicio {
         this.duAtencion = duAtencion;
     }
 
-    public Double getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(Double precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
@@ -57,7 +57,7 @@ public class Servicio {
   
 
   //Constructor
-    public Servicio(String nomServicio, String duAtencion, Double precio, String estado) {
+    public Servicio(String nomServicio, String duAtencion, double precio, String estado) {
         this.nomServicio = nomServicio;
         this.duAtencion = duAtencion;
         this.precio = precio;
@@ -66,6 +66,7 @@ public class Servicio {
         
     }
     
+
     @Override
       public String toString() {
        return String.format("Nombre: %s ,Precio: %f ,Duracion: %s ,Estado: %s", 
@@ -73,12 +74,10 @@ public class Servicio {
       
     }
     
-  
-      
- 
-        
+
     }
     
    
+
     
 

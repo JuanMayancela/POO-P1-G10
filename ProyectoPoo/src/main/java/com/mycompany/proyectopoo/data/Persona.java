@@ -9,10 +9,12 @@ package com.mycompany.proyectopoo.data;
  * @author Usuario
  */
 public class Persona {
+
     protected String nombre, email;
     protected String cedula, telefono;
 
     public Persona(String nombre, String email, String cedula, String telefono) {
+
         this.nombre = nombre;
         this.email = email;
         this.cedula = cedula;

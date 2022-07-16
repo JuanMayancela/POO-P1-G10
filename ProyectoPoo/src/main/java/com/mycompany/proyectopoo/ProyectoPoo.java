@@ -16,12 +16,21 @@ public class ProyectoPoo {
     static Scanner input = new Scanner(System.in);
     public static char respuesta = '1';
     
+    private static AdministradorServicio servicioAdmin;
+    private static AdministradorEmpleado empleadoAdmin;
+    
+    public static void inicilizarSistema(){
+        
+        servicioAdmin = new AdministradorServicio(input);
+        empleadoAdmin = new AdministradorEmpleado(input);
+    
+    
+    }
 
     public static void main(String[] args) {
-        AdministradorServicio servicioAdmin = new AdministradorServicio(input);
-        AdministradorEmpleado empleadoAdmin = new AdministradorEmpleado(input);
-   
-   
+        
+        inicilizarSistema();
+
         while(respuesta != '6'){
 
             //menu
@@ -56,3 +65,4 @@ public class ProyectoPoo {
     
     
 }
+

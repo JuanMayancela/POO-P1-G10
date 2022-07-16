@@ -10,10 +10,14 @@ package com.mycompany.proyectopoo.data;
  */
 public class Cliente extends Persona {
     private String datosRepresentante;
+   
+    //lista de clientes
     
     //Constructor
+
     public Cliente(String cedula, String nombre, String telefono, String email, String datosRepresentante){
         super(nombre,email, cedula, telefono);//constructor de la clase Persona
+
         this.datosRepresentante = datosRepresentante;
     }
     
