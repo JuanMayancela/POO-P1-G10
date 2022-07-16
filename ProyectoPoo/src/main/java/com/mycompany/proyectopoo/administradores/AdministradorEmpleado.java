@@ -25,12 +25,12 @@ public class AdministradorEmpleado {
     public AdministradorEmpleado(Scanner input) {
        this.empleados = new ArrayList<>();
        this.input = input;
-       
+       //se crean los objetos de tipo Empleado y se los agregan a la lista empleados
        this.empleados.add(new Empleado("0705398184", "Carlos", "0989671287", "carlos@hotmail.com", "Activo"));
  
     }
     
-     //metodo para recorrer la lista de los empleados
+     //metodo para recorrer la lista de los empleados y mostrarlos
       public void listaEmpleado() {
           System.out.println("\nLos Empleados existentes son: ");
           if(!empleados.isEmpty()){
