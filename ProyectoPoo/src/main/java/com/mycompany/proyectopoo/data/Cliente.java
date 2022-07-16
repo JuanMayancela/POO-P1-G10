@@ -11,15 +11,7 @@ package com.mycompany.proyectopoo.data;
 public class Cliente extends Persona {
     private String datosRepresentante;
    
-    //lista de clientes
-    
-    
     //Constructor
-    
-     public Cliente(){
-         super("","","","");
-    
-    }
 
     public Cliente(String cedula, String nombre, String telefono, String email, String datosRepresentante){
         super(nombre,email, cedula, telefono);//constructor de la clase Persona
@@ -27,13 +19,7 @@ public class Cliente extends Persona {
         this.datosRepresentante = datosRepresentante;
     }
     
-    @Override
-      public String toString() {
-       return String.format("Nombre: %s ,email: %s ,cedula: %s ,telefono: %s ,datosRepresentante: %s", 
-            nombre, email, cedula, telefono, datosRepresentante); 
-      
-    }
-    
+    //Getters y setters
     public String getDatosRepresentante(){
         return datosRepresentante;
     }
@@ -41,4 +27,10 @@ public class Cliente extends Persona {
         this.datosRepresentante = datosRepresentante;
     }
     
+    //Se sobreescribe el metodo toString()
+    @Override
+    public String toString() {
+        //Se agrega al metodo toString de la clase Persona los datos del Representante del Cliente
+        return super.toString()+"Datos Representante: "+datosRepresentante;
+    }
 }
