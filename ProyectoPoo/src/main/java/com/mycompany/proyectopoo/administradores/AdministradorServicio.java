@@ -59,14 +59,21 @@ public class AdministradorServicio {
         nServicios = input.nextInt();
         input.nextLine();
  
-       
-        System.out.println("Ingrese los Servicios:");
-      
         for(int i = 0;  i < nServicios; i++){
-            Servicio servicioTMP = new Servicio();
-            
+            //Pedimos los datos
             System.out.println("Ingrese el servicio " + (i+1) + " :");
-            this.servicios.add(this.modificarSer(servicioTMP));
+            System.out.println("Ingrese el nombre del Servicio: ");
+            String nombre = input.nextLine();
+            System.out.println("Ingrese la duracion de la Atencion ");
+            String duracionAtencion = input.nextLine();
+            System.out.println("Ingrese el precio del Servicio: ");
+            double precio = input.nextInt();
+            System.out.println("Ingrese el estado del Servicio(Activo o Inactivo: ");
+            String estado = input.nextLine();
+            Servicio servicioTMP = new Servicio(nombre, duracionAtencion, precio, estado);
+            
+            //Despues, agregamos el nuevo servicio a la lista servicios
+            this.servicios.add(servicioTMP);
           
         }
         
@@ -128,7 +135,7 @@ public class AdministradorServicio {
         listaServicio();
         int nPosicion;
  
-        System.out.println("Ingrese el número del servicio a editar: ");
+        System.out.println("Ingrese el número del servicio a eliminar: ");
        
         nPosicion = input.nextInt();
         input.nextLine();
@@ -136,9 +143,8 @@ public class AdministradorServicio {
           
             System.out.println("El número de servicio es incorrecto");
         }else if(nPosicion > 0){
-           
-            System.out.println("Ingrese el nuevo estado del servicio:");
-            servicios.get(nPosicion - 1).setEstado(input.nextLine());
+            //Para eliminar el servicio se cambia el estado de "Activo" a "Inactivo"
+            servicios.get(nPosicion - 1).setEstado("Inactivo");
             listaServicio();
       
         }    
