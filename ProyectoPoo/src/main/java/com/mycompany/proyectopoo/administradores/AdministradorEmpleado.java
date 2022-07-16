@@ -16,7 +16,7 @@ import java.util.Scanner;
  */
 public class AdministradorEmpleado {
     
-      private Scanner input;
+    private Scanner input;
     
     private List<Empleado> empleados;
     private char respuesta = '1';
@@ -71,21 +71,34 @@ public class AdministradorEmpleado {
       
       
     public void agregarEmpleado(){
-        
-         int nEmpleados;
+
+        int nEmpleados;
  
         System.out.println("Ingrese la cantidad de Empleados que desea agregar:");
         nEmpleados = input.nextInt();
         input.nextLine();
- 
-       
-        System.out.println("Ingrese los empleados:");
-      
+
         for(int i = 0;  i < nEmpleados; i++){
-            Empleado empleadoTMP = new Empleado();
-            
+            //Pedimos los datos
             System.out.println("Ingrese el empleado " + (i+1) + " :");
-            this.empleados.add(this.modificarEmple(empleadoTMP));
+            System.out.println("Ingrese la cedula del empleado: ");
+            String cedula = input.nextLine();
+            
+            System.out.println("Ingrese el nombre del empleado: ");
+            String nombre = input.nextLine();
+            
+            System.out.println("Ingrese el telefono del Empleado: ");
+            String telefono = input.nextLine();
+            
+            System.out.println("Ingrese el email del Empleado: ");
+            String email = input.nextLine();
+            
+            System.out.println("Ingrese el estado del Empleado(Activo o Inactivo): ");
+            String estado = input.nextLine();
+            Empleado empleadoTMP = new Empleado(cedula, nombre, telefono, email, estado);
+            
+            //Despues, agregamos el nuevo empleado a la lista empleados
+            this.empleados.add(empleadoTMP);
           
         }
         
@@ -129,11 +142,11 @@ public class AdministradorEmpleado {
         input.nextLine();
         if(nPosicion > empleados.size()){
           
-            System.out.println("El número de empleado es incorrecto");
+        System.out.println("El número de empleado es incorrecto");
         }else if(nPosicion > 0){
-           
+            //Para eliminar el empleado se cambia el estado de "Activo" a "Inactivo"
             System.out.println("Ingrese el nuevo estado del empleado:");
-            empleados.get(nPosicion - 1).setEstado(input.nextLine());
+            empleados.get(nPosicion - 1).setEstado("Inactivo");
             listaEmpleado();
       
         }    
