@@ -5,7 +5,9 @@
 package com.mycompany.proyectopoo.administradores;
 
 import com.mycompany.proyectopoo.data.Cita;
+import com.mycompany.proyectopoo.data.Cliente;
 import com.mycompany.proyectopoo.data.Empleado;
+import com.mycompany.proyectopoo.data.Servicio;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
