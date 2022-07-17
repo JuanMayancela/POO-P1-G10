@@ -64,12 +64,17 @@ public class AdministradorServicio {
             System.out.println("Ingrese el servicio " + (i+1) + " :");
             System.out.println("Ingrese el nombre del Servicio: ");
             String nombre = input.nextLine();
+            
             System.out.println("Ingrese la duracion de la Atencion ");
             String duracionAtencion = input.nextLine();
+            
             System.out.println("Ingrese el precio del Servicio: ");
-            double precio = input.nextInt();
+            double precio = input.nextDouble();
+            
             System.out.println("Ingrese el estado del Servicio(Activo o Inactivo: ");
             String estado = input.nextLine();
+            
+            //Se cra el objeto Servicio
             Servicio servicioTMP = new Servicio(nombre, duracionAtencion, precio, estado);
             
             //Despues, agregamos el nuevo servicio a la lista servicios
