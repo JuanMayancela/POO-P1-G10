@@ -47,9 +47,4 @@ public class Sistema {
         
     }
     
-    //Metodo salir del sistema
-    public void salir(){
-        System.out.println("Gracias por su visita");
-    
-    }
 }
