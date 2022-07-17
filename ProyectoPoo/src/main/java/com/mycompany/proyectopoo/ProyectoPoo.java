@@ -43,13 +43,9 @@ public class ProyectoPoo {
         while(respuesta != '6'){
 
             //menu
-            System.out.println("""
-                               1.Servicios
-                               2.Empleados
-                               3.Clientes
-                               4.Citas
-                               5.Atenciones
-                               6.Salir""");
+            
+            System.out.println("1.Servicios"+"\n2.Empleados"+"\n3.Clientes"+"\n4.Citas"+"\n5.Atenciones"+"\n6.Salir");
+            System.out.println("Seleccione una opcion: ");
             respuesta = input.nextLine().charAt(0);
             switch(respuesta){
                 case '1':
