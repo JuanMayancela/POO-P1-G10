@@ -26,10 +26,10 @@ public class AdministradorAtencion {
     public AdministradorAtencion(Scanner input) {
        this.atenciones = new ArrayList<>();
        this.input = input;
-       Empleado emple = new Empleado();
-       Servicio ser = new Servicio();
+       Empleado empleado1 = new Empleado("2450551469", "Jonathan", "0995473265", "jonathan@hotmail.com", "Activo");
+       Servicio servicio1 = new Servicio("Terapia_Sistemica","1:40", 38.5, "Activo");
        
-       this.atenciones.add(new Atencion("0:10", ser, emple));
+       this.atenciones.add(new Atencion("0:10", servicio1, empleado1));
  
     }
     
