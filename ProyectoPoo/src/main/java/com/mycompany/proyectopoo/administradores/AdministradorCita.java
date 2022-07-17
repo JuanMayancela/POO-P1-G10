@@ -36,7 +36,7 @@ public class AdministradorCita {
     
     //metodo para recorrer la lista de las citas y mostrarlas
     public void listaCitas() {
-        System.out.println("\nLos Citas existentes son: ");
+        System.out.println("\nLas Citas existentes son: ");
             if(!citas.isEmpty()){
               
                 for(int i = 0;  i < citas.size(); i++){ 
@@ -44,7 +44,7 @@ public class AdministradorCita {
                 }
             }else{
                     
-                System.out.printf("no esxisten citas para mostrar");       
+                System.out.printf("no existen citas para mostrar");       
             }
         
     }
