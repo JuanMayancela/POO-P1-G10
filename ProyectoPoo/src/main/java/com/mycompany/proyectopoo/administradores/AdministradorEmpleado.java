@@ -62,7 +62,7 @@ public class AdministradorEmpleado {
         System.out.println("\tIngrese el telefono del empleado: ");
         empleado.setTelefono(input.nextLine());
         
-        System.out.println("\tIngrese el estado del empleado: ");
+        System.out.println("\tIngrese el estado del empleado(Activo o Inactivo): ");
         empleado.setEstado(input.nextLine());
         
         return empleado;
@@ -111,7 +111,7 @@ public class AdministradorEmpleado {
       
         int nPosicion;
  
-        System.out.println("Ingrese el número del empleado a editar: ");
+        System.out.println("Ingrese el número del empleado a eliminar: ");
        
         nPosicion = input.nextInt();
         input.nextLine();
@@ -159,13 +159,8 @@ public class AdministradorEmpleado {
                 
         while(respuesta != '4'){
         
-            System.out.println("""
-                1.Agregar Empleado
-                2.Editar Empleado
-                3.Eliminar Empleado
-                4.Salir
-                """);
-
+            System.out.println("1.Agregar Empleado"+"\n2.Editar Empleado"+"\n3.Eliminar Empleado"+"\n4.Salir");
+            System.out.println("Seleccione una opcion: ");
             respuesta = input.nextLine().charAt(0);
             switch(respuesta){
                 case '1':
