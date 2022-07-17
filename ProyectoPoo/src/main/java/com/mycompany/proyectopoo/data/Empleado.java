@@ -29,6 +29,6 @@ public class Empleado extends Persona {
     @Override
     public String toString() {
         //Agregamos al metodo toString de la clase Padre el estado del Empleado
-        return super.toString()+"Estado: "+estado;
+        return super.toString()+", Estado: "+estado;
     }
 }
