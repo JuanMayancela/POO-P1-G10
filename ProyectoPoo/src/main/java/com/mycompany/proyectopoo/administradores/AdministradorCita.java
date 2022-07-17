@@ -82,13 +82,8 @@ public class AdministradorCita {
                 
         while(respuesta != '4'){
         
-            System.out.println("""
-                1.Crear Cita
-                2.Eliminar Cita
-                3.Consultar citas por Fecha
-                4.Salir
-                """);
-
+            System.out.println("1.Crear Cita"+"\n2.Eliminar Cita"+"\n3.Consultar citas por Fecha"+"\n4.Salir");
+            System.out.println("Seleccione una opcion: ");
             respuesta = input.nextLine().charAt(0);
             switch(respuesta){
                 case '1':
