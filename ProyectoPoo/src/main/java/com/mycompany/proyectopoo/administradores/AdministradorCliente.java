@@ -25,8 +25,8 @@ public class AdministradorCliente {
        this.clientes = new ArrayList<>();
        this.input = input;
        //se crean los objetos de coase Cliente y se los agregan a la lista clientes
-       this.clientes.add(new Cliente("0707398184", "Alberto", "0979651157", "alberto@hotmail.com", "Activo"));
-       this.clientes.add(new Cliente("0705682196", "Juan", "0998672356", "juan@hotmail.com", "Activo"));
+       this.clientes.add(new Cliente("0707398184", "Alberto", "0979651157", "alberto@hotmail.com", "Jose"));
+       this.clientes.add(new Cliente("0705682196", "Juan", "0998672356", "juan@hotmail.com", "Daniel"));
     }
     
     //metodo para recorrer la lista de los clientes y mostrarlos
