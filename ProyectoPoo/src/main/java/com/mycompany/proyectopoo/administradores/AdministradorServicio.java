@@ -45,46 +45,10 @@ public class AdministradorServicio {
             }
           }else{
                     
-                System.out.printf("no existen servicios");       
+                System.out.printf("no esxisten servicios");       
             } 
     }
-      
-    //Metodo agregar Servicio
-    public void agregarServicio(){
-        
-    
-        int nServicios;
- 
-        System.out.println("Ingrese la cantidad de Servicios que desea agregar:");
-        nServicios = input.nextInt();
-        input.nextLine();
- 
-        for(int i = 0;  i < nServicios; i++){
-            //Pedimos los datos
-            System.out.println("Ingrese el servicio " + (i+1) + " :");
-            System.out.println("Ingrese el nombre del Servicio: ");
-            String nombre = input.nextLine();
-            
-            System.out.println("Ingrese la duracion de la Atencion ");
-            String duracionAtencion = input.nextLine();
-            
-            System.out.println("Ingrese el precio del Servicio: ");
-            double precio = input.nextDouble();
-            
-            System.out.println("Ingrese el estado del Servicio(Activo o Inactivo: ");
-            String estado = input.nextLine();
-            
-            //Se cra el objeto Servicio
-            Servicio servicioTMP = new Servicio(nombre, duracionAtencion, precio, estado);
-            
-            //Despues, agregamos el nuevo servicio a la lista servicios
-            this.servicios.add(servicioTMP);
-          
-        }
-        
-        listaServicio();
- 
-        }
+
     
     //Metodo Modificar servicio
     public Servicio modificarSer(Servicio servicio){ 
@@ -105,6 +69,34 @@ public class AdministradorServicio {
         return servicio;
         
     }
+    
+          
+    //Metodo agregar Servicio
+    public void agregarServicio(){
+        
+            //Pedimos los datos
+            System.out.println("Ingrese el nombre del Servicio: ");
+            String nombre = input.nextLine();
+            
+            System.out.println("Ingrese la duracion de la Atencion ");
+            String duracionAtencion = input.nextLine();
+            
+            System.out.println("Ingrese el estado del Servicio(Activo o Inactivo): ");
+            String estado = input.nextLine();
+            
+            System.out.println("Ingrese el precio del Servicio: ");
+            double precio = input.nextDouble();
+            input.nextLine();
+            
+            //Se crea el objeto Servicio
+            Servicio servicioTMP = new Servicio(nombre, duracionAtencion, precio, estado);
+            
+            //Despues, agregamos el nuevo servicio a la lista servicios
+            this.servicios.add(servicioTMP);
+        
+        listaServicio();
+ 
+        }
     
     //Metodo editar Servicio
     public void editarServicio(){
@@ -164,13 +156,9 @@ public class AdministradorServicio {
                 
         while(respuesta != '4'){
         
-            System.out.println("""
-                1.Agregar Servicio
-                2.Editar Servicio
-                3.Eliminar Servicio
-                4.Salir
-                """);
-
+            System.out.println("1.Agregar Servicio"+"\n2.Editar Servicio"+"\n3.Eliminar Servicio"+"\n4.Salir");
+            System.out.println("Seleccione una opcion: ");
+            
             respuesta = input.nextLine().charAt(0);
             switch(respuesta){
                 case '1':
