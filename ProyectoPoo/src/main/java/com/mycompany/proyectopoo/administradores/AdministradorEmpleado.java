@@ -72,15 +72,7 @@ public class AdministradorEmpleado {
       
     public void agregarEmpleado(){
 
-        int nEmpleados;
- 
-        System.out.println("Ingrese la cantidad de Empleados que desea agregar:");
-        nEmpleados = input.nextInt();
-        input.nextLine();
-
-        for(int i = 0;  i < nEmpleados; i++){
             //Pedimos los datos
-            System.out.println("Ingrese el empleado " + (i+1) + " :");
             System.out.println("Ingrese la cedula del empleado: ");
             String cedula = input.nextLine();
             
@@ -99,8 +91,6 @@ public class AdministradorEmpleado {
             
             //Despues, agregamos el nuevo empleado a la lista empleados
             this.empleados.add(empleadoTMP);
-          
-        }
         
         listaEmpleado();
     }
@@ -111,7 +101,7 @@ public class AdministradorEmpleado {
       
         int nPosicion;
  
-        System.out.println("Ingrese el número del empleado a eliminar: ");
+        System.out.println("Ingrese el número del empleado a editar: ");
        
         nPosicion = input.nextInt();
         input.nextLine();
