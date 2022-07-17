@@ -45,7 +45,7 @@ public class AdministradorServicio {
             }
           }else{
                     
-                System.out.printf("no esxisten servicios");       
+                System.out.printf("no existen servicios");       
             } 
     }
       
