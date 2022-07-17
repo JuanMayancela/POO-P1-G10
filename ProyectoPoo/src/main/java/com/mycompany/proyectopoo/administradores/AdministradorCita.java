@@ -28,9 +28,13 @@ public class AdministradorCita {
        this.input = input;
        Empleado emple1 = new Empleado("0955476128", "Samuel", "0989741246", "samuel@hotmail.com", "Activo");
        Empleado emple2 = new Empleado("2450886572", "John", "0964457823", "john@hotmail.com", "Activo");
+       Cliente cl2 = new Cliente("0707398184", "Alberto", "0979651157", "alberto@hotmail.com", "Jose");
+       Cliente cl1 = new Cliente("0707351234", "Javier", "0979652307", "javier@hotmail.com", "Luis");
+       Servicio s1 = new Servicio("Terapia_de_Lenguaje","2:00", 22.5, "Activo");
+       Servicio s2 = new Servicio("Terapia_Psicopedagogica","1:30", 30.50, "Activo");
        //se crean los objetos de clase cita y se los agregan a la lista citas
-       this.citas.add(new Cita("16/7/20022", "12:30", 1,emple1));
-       this.citas.add(new Cita("15/7/20022", "14h30", 1,emple2));
+       this.citas.add(new Cita("16/07/20022", "12:30", cl1, s1, emple1));
+       this.citas.add(new Cita("15/07/20022", "14h30", cl2, s2, emple2));
  
     }
     
@@ -50,7 +54,43 @@ public class AdministradorCita {
     }
     //metodo crearCita
      public void crearCita() {
+         
+      
+            //Pedimos los datos
+            System.out.println("Ingrese la fecha de la cita(dd/mm/aa): ");
+            String fecha = input.nextLine();
+            
+            System.out.println("Ingrese la hora de la cita(hh:mm): ");
+            String hora = input.nextLine();
+            
+            for(Cita cita: citas){
+             while (cita.getFecha().equals(fecha)&&(cita.getHora().equals(hora))){
+                 System.out.println("No se puede crear cita en esa fecha y hora");
+                 
+                 System.out.println("Ingrese la fecha de la cita(dd/mm/aa): ");
+                 fecha = input.nextLine();
+            
+                 System.out.println("Ingrese la hora de la cita(hh:mm): ");
+                 hora = input.nextLine();
+             }
+         }
+            
+            System.out.println("Ingrese el mombre de cliente): ");
+            String nombre = input.nextLine();
+            
+            System.out.println("Ingrese el servicio: ");
+            String servicio = input.nextLine();
+            
+            System.out.println("Ingrese la Persona Encargada de proveer el servicio: ");
+            String perEncargada = input.nextLine();
+            
+
+            Cita citaTMP = new Cita(fecha, hora, nombre, servicio, perEncargada);
+            
+            //Despues, agregamos la nueva cita a la lista citas
+            this.citas.add(citaTMP);
         
+        listaCitas();
     }
      //metodo eliminarCita
      public void eliminarCita() {
@@ -58,23 +98,20 @@ public class AdministradorCita {
         
     }
      
-     public void consultarCita() {
-         //if(fecha.equals(fechaConsultar)){
-             System.out.println("");
-
-         
-    }
      //metodo consultarCita
-     /**public void consultarCita() {
+     public void consultarCita() {
          
          System.out.println("Ingrese la fecha a consultar ");
-         String fechaConsultar = sc.nextLine();
-         if(fecha.equals(fechaConsultar)){
-             System.out.println();
+         String fechaConsultar = input.nextLine();
+         for(Cita cita: citas){
+             if(cita.getFecha().equals(fechaConsultar)){
+             System.out.println(cita);
+             }
          }
+         
     }
-        sc.close();**/
-//}
+        
+
     
     
     public void SubmenuCitas(){
@@ -109,4 +146,3 @@ public class AdministradorCita {
       
 }
     
-
