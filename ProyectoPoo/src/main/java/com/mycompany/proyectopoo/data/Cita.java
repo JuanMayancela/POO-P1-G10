@@ -15,10 +15,11 @@ import com.mycompany.proyectopoo.data.Empleado;
  */
 public class Cita {
     
-    protected String fecha;
-    protected String hora;
-    protected int citasPendientes;
-    protected Empleado perEncargada; 
+    private String fecha;
+    private String hora;
+    private Empleado perEncargada;
+    private Cliente cliente;
+    private Servicio servicio;
 
     //set&get
     public String getFecha() {
@@ -37,14 +38,6 @@ public class Cita {
         this.hora = hora;
     }
 
-    public int getCitasPendientes() {
-        return citasPendientes;
-    }
-
-    public void setCitasPendientes(int citasPendientes) {
-        this.citasPendientes = citasPendientes;
-    }
-
     public Empleado getPerEncargada() {
         return perEncargada;
     }
@@ -53,20 +46,37 @@ public class Cita {
         this.perEncargada = perEncargada;
     }
 
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public Servicio getServicio() {
+        return servicio;
+    }
+
+    public void setServicio(Servicio servicio) {
+        this.servicio = servicio;
+    }
+
+
     //constructor de clase
-    public Cita(String fecha, String hora, int citasPendientes, Empleado perEncargada) {
+    public Cita(String fecha, String hora,Cliente cliente, Servicio servicio, Empleado perEncargada) {
         this.fecha = fecha;
         this.hora = hora;
-        this.citasPendientes = citasPendientes;
+        this.cliente = cliente;
+        this.servicio = servicio;
         this.perEncargada = perEncargada;
     }
     
     //Se sobreescribe el metodo toString()
     @Override
     public String toString() {
-        return String.format("Fecha: %s ,Hora: %s ", 
-            fecha, hora, citasPendientes, perEncargada); 
+        return String.format("Fecha: %s ,Hora: %s , Cliente: %s , Servicio: %s , Persona Encargada: %s", 
+            fecha, hora, cliente, servicio, perEncargada); 
     }
     
 }
-     
