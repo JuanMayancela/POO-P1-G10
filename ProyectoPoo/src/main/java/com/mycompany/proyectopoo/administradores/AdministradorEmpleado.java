@@ -40,7 +40,7 @@ public class AdministradorEmpleado {
             }
           }else{
                     
-                System.out.printf("no esxisten empleados para mostrar");
+                System.out.printf("no existen empleados para mostrar");
                      
             }
         
