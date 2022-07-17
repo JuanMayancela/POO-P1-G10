@@ -44,8 +44,103 @@ public class AdministradorCliente {
         
     }
     
-    
-    public void menuCliente(){
+   
+    private Cliente modificarCliente(Cliente cliente){ 
+        
+        System.out.println("\tIngrese el nombre del Cliente: ");
+        cliente.setNombre(input.nextLine());
+        
+        System.out.println("\tIngrese el email del cliente: ");
+        cliente.setEmail(input.nextLine());
+
+        System.out.println("\tIngrese el telefono del cliente: ");
+        cliente.setTelefono(input.nextLine());
+        
+        System.out.println("\tIngrese los datos del Representante: ");
+        cliente.setDatosRepresentante(input.nextLine());
+        
+        return cliente;
+        
+    }
+      
+      
+    public void agregarCliente(){
+
+            //Pedimos los datos
+            System.out.println("Ingrese la cedula del cliente: ");
+            String cedula = input.nextLine();
+            
+            System.out.println("Ingrese el nombre del cliente: ");
+            String nombre = input.nextLine();
+            
+            System.out.println("Ingrese el telefono del cliente: ");
+            String telefono = input.nextLine();
+            
+            System.out.println("Ingrese el email del cliente: ");
+            String email = input.nextLine();
+            
+            System.out.println("Ingrese los datos del Representante: ");
+            String datosRepresentante = input.nextLine();
+            Cliente clienteTMP = new Cliente(cedula, nombre, telefono, email, datosRepresentante);
+            
+            //Despues, agregamos el nuevo cliente a la lista clientes
+            this.clientes.add(clienteTMP);
+        
         listaClientes();
+    }
+    
+    public void editarCliente(){ 
+        
+        listaClientes();
+      
+        int nPosicion;
+ 
+        System.out.println("Ingrese el número del cliente a editar: ");
+       
+        nPosicion = input.nextInt();
+        input.nextLine();
+        
+        
+        if(nPosicion > clientes.size()){
+          
+            System.out.println("El número de cliente es incorrecto");
+            
+        }else if(nPosicion > 0){
+           
+            System.out.println("Ingrese los datos del nuevo cliente:");
+            clientes.set(nPosicion-1, modificarCliente(clientes.get(nPosicion - 1)));
+            listaClientes();
+        }
+        
+    
+    }
+   
+    
+        public void menuCliente(){
+        
+        respuesta = '1';
+                
+        while(respuesta != '4'){
+        
+            System.out.println("1.Agregar Cliente"+"\n2.Editar Cliente"+"\n3.Salir");
+            System.out.println("Seleccione una opcion: ");
+            respuesta = input.nextLine().charAt(0);
+            switch(respuesta){
+                case '1':
+                    agregarCliente();
+                    break;
+                case '2':
+                    editarCliente();
+                    break;
+                case '3':
+                    return;
+                   
+                default :
+                    System.out.println("La opcion es incorrecta");    
+
+            }
+        }
+
+    
     }
 }
