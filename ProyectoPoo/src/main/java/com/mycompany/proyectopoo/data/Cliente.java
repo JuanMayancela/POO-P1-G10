@@ -31,6 +31,6 @@ public class Cliente extends Persona {
     @Override
     public String toString() {
         //Se agrega al metodo toString de la clase Persona los datos del Representante del Cliente
-        return super.toString()+"Datos Representante: "+datosRepresentante;
+        return super.toString()+", Datos Representante: "+datosRepresentante;
     }
 }
