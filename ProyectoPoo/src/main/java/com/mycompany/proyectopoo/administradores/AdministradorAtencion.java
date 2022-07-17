@@ -35,7 +35,7 @@ public class AdministradorAtencion {
     
     //metodo para recorrer la lista atenciones y mostrarla
     public void listaAtenciones() {
-        System.out.println("\nLos Atenciones existentes son: ");
+        System.out.println("\nLas Atenciones existentes son: ");
             if(!atenciones.isEmpty()){
               
                 for(int i = 0;  i < atenciones.size(); i++){ 
@@ -43,7 +43,7 @@ public class AdministradorAtencion {
                 }
             }else{
                     
-                System.out.printf("no esxisten atenciones para mostrar");       
+                System.out.printf("no existen atenciones para mostrar");       
             }
     }  
     
