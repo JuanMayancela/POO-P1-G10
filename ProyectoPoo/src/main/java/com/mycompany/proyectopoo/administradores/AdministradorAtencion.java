@@ -61,13 +61,8 @@ public class AdministradorAtencion {
                 
         while(respuesta != '3'){
         
-            System.out.println("""
-                1.Agregar Empleado
-                2.Editar Empleado
-                3.Eliminar Empleado
-                4.Salir
-                """);
-
+            System.out.println("1.Agregar Empleado"+"\n2.Editar Empleado"+"\n3.Eliminar Empleado"+"\n4.Salir");
+            System.out.println("Seleccione una opcion: ");
             respuesta = input.nextLine().charAt(0);
             switch(respuesta){
                 case '1':
