@@ -73,7 +73,7 @@ public class ProyectoPoo {
                     break;
                      
                 case '6':
-                    return;
+                    System.out.println("Gracias por su visita");
                 default :
                     System.out.println("La opcion es incorrecta");
 
