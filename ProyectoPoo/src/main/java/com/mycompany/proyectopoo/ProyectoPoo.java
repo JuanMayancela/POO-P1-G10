@@ -53,14 +53,17 @@ public class ProyectoPoo {
             respuesta = input.nextLine().charAt(0);
             switch(respuesta){
                 case '1':
+                    servicioAdmin.listaServicio();
                     servicioAdmin.menuServicio();
                     break;
                     
                 case '2':
+                    empleadoAdmin.listaEmpleado();
                     empleadoAdmin.menuEmpleado();
                     break;
                     
                 case '3':
+                    clienteAdmin.listaClientes();
                     clienteAdmin.menuCliente();
                     break;
                     
