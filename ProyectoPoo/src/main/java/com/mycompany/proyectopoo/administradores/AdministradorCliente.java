@@ -39,7 +39,7 @@ public class AdministradorCliente {
                 }
             }else{
                     
-                System.out.printf("no esxisten clientes para mostrar");       
+                System.out.printf("no existen clientes para mostrar");       
             }
         
     }
